@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap");
+
+:root {
+  --color-white: #fff;
+  --color-gray: #d5d5d5;
+  --color-darkest: #1b1f23;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  min-height: 50px;
+  background: var(--color-darkest);
+  color: var(--color-white);
+}
+
+.box {
+  padding: 1rem;
+}
+
+/* mobile nav */
+.mobile-nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+
+.mobile-nav a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.mobile-nav button {
+  background: none;
+  color: var(--color-white);
+  border: none;
+}
+
+.mobile-nav button {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.bell {
+  font-size: 20px;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.desktop {
+  display: none;
+}
+.mobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
+  .desktop-nav {
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .nav-searchbar {
+    background: none;
+    border: 1px #777777 solid;
+    color: var(--color-darkest);
+    border-radius: 5px;
+    padding: 5px 10px;
+    min-width: 240px;
+    transition: 0.23s ease-out;
+  }
+
+  .nav-searchbar::placeholder {
+    color: var(--color-white);
+  }
+
+  .nav-searchbar:focus {
+    background: var(--color-white);
+    min-width: 320px;
+  }
+
+  .nav-item {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }
+
+  .nav-item a {
+    padding: 5px 10px;
+    color: var(--color-white);
+    text-decoration: none;
+  }
+
+  .nav-item a:hover {
+    color: var(--color-gray);
+  }
+
+  .nav-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-info a {
+    color: var(--color-white);
+    padding: 5px 10px;
+  }
+  .nav-info a span {
+    padding-left: 5px;
+  }
+
+  .mini-pic {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: white;
+    object-fit: cover;
+  }
+}
