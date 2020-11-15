@@ -12,8 +12,13 @@
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.25;
   letter-spacing: 0.6px;
+}
+
+input,
+button {
+  outline-style: none;
 }
 
 main {
@@ -28,7 +33,7 @@ nav {
 }
 
 .box {
-  padding: 1rem;
+  padding: 0.7rem 1.3rem;
 }
 
 /* mobile nav */
@@ -73,9 +78,99 @@ nav {
   display: none;
 }
 .mobile {
-  display: flex;
+  display: block;
 }
 
+.tabs-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  border-bottom: 1px var(--color-gray) solid;
+}
+.grid-box {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  align-items: center;
+  grid-gap: 1em;
+}
+
+.mobile-pic {
+  width: 53px;
+  height: 53px;
+  margin-right: 1em;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 1px var(--color-gray) solid;
+  position: relative;
+}
+
+.mobile-pic > img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.user h2 {
+  font-size: 26px;
+}
+.user h6 {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-darkest);
+}
+
+.status {
+  width: 100%;
+  margin: 1rem auto;
+  overflow: hidden;
+  border: 1px var(--color-gray) solid;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  grid-gap: 0.5rem;
+}
+.status > input {
+  border: none;
+  padding: 2px 4px;
+}
+
+.role {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tab-links {
+  display: flex;
+  justify-content: left;
+  overflow-x: auto;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.tab-links ul {
+  list-style: none;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.tab-links ul li a {
+  padding: 0.6rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--color-darkest);
+  font-weight: 600;
+}
+
+.active-tab {
+  border-bottom: 2px #f9826c solid;
+}
+
+/* DESKTOP */
 @media (min-width: 768px) {
   .mobile {
     display: none;
@@ -84,7 +179,9 @@ nav {
   .desktop {
     display: flex;
   }
-
+  .tabs-box {
+    grid-template-columns: 1fr 3fr;
+  }
   .desktop-nav {
     justify-content: space-between;
     align-items: center;
@@ -146,5 +243,9 @@ nav {
     border-radius: 50%;
     background: white;
     object-fit: cover;
+  }
+
+  .tab-links {
+    overflow-x: visible;
   }
 }

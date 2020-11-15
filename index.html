@@ -12,12 +12,14 @@
     <nav>
       <div class="box">
         <!-- mobile nav -->
-        <div class="mobile-nav mobile">
-          <button><i class="fas fa-bars"></i></button>
-          <a href="#"
-            ><img class="logo" src="assets/gitlogo.svg" alt="logo"
-          /></a>
-          <a href="#" class="bell"><i class="far fa-bell"></i></a>
+        <div class="mobile">
+          <div class="mobile-nav flex-box">
+            <button><i class="fas fa-bars"></i></button>
+            <a href="#"
+              ><img class="logo" src="assets/gitlogo.svg" alt="logo"
+            /></a>
+            <a href="#" class="bell"><i class="far fa-bell"></i></a>
+          </div>
         </div>
         <!-- desktop nav -->
         <div class="desktop-nav desktop">
@@ -59,13 +61,34 @@
     </nav>
 
     <div class="tabs-box">
-      <div></div>
-      <div class="">
+      <div class="mobile box">
+        <div class="grid-box">
+          <div class="mobile-pic">
+            <img
+              src="https://images.unsplash.com/photo-1533088468076-d1f6bdf16f62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"
+              alt=""
+            />
+          </div>
+
+          <div class="user">
+            <h2>Ngozi Izuchi G</h2>
+            <h6>giprim</h6>
+          </div>
+        </div>
+        <div class="status">
+          <i class="far fa-smile"></i
+          ><input type="text" placeholder="Set status" />
+        </div>
+
+        <h6 class="role">Software Engineer</h6>
+      </div>
+
+      <div class="tab-links box">
         <ul>
-          <li>Overview</li>
-          <li>Repositories</li>
-          <li>Projects</li>
-          <li>Packages</li>
+          <li><a href="#">Overview </a></li>
+          <li><a href="#" class="active-tab">Repositories </a></li>
+          <li><a href="#">Projects </a></li>
+          <li><a href="#">Packages </a></li>
         </ul>
       </div>
     </div>
@@ -74,7 +97,7 @@
       <main>
         <!-- Profile info -->
         <aside>
-          <div>
+          <div class="desktop">
             <div>img</div>
             <div>
               <h3>Ngozi Izuchi</h3>
@@ -84,7 +107,7 @@
           </div>
         </aside>
         <!-- Repos -->
-        <div></div>
+        <div style="height: 100vh"></div>
       </main>
     </div>
   </body>
@@ -96,3 +119,5 @@
     crossorigin="anonymous"
   ></script>
 </html>
+
+<script src="script.js"></script>
