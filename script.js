@@ -35,22 +35,23 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }  
   `).then((res) => {
-    console.log(res.data);
-    console.log(res.data.viewer.bio);
     let profilePicture = document.querySelectorAll(".profilePicture");
 
     for (let i = 0; i < profilePicture.length; i++) {
       profilePicture[i].setAttribute("src", res.data.viewer.avatarUrl);
     }
 
-    let profileName = document.querySelector(".profileName");
-    profileName.textContent = res.data.viewer.name;
+    let profileName = document.querySelectorAll(".profileName");
+    profileName[0].textContent = res.data.viewer.name;
+    profileName[1].textContent = res.data.viewer.name;
 
-    let profileNickName = document.querySelector(".profileNickName");
-    profileNickName.textContent = res.data.viewer.login;
+    let profileNickName = document.querySelectorAll(".profileNickName");
+    profileNickName[0].textContent = res.data.viewer.login;
+    profileNickName[1].textContent = res.data.viewer.login;
 
-    let profileBio = document.querySelector(".bio");
-    profileBio.textContent = res.data.viewer.bio;
+    let profileBio = document.querySelectorAll(".bio");
+    profileBio[0].textContent = res.data.viewer.bio;
+    profileBio[1].textContent = res.data.viewer.bio;
 
     let repoTab = document.querySelector(".repoTab");
     repoTab.textContent = res.data.viewer.repositories.totalCount;
@@ -68,7 +69,7 @@ window.addEventListener("DOMContentLoaded", function () {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "bearer c0df7ce4f790934a35d74bc9aa9697cf7d90a6a8",
+        Authorization: "bearer f33fe5cdd6ce46f37e26a6d7722086c03b0b60d0",
       },
       body: JSON.stringify({
         query: query,

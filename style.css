@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
 
 :root {
   --color-white: #fff;
@@ -12,7 +14,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
+  /* font-family: "Source Sans Pro", sans-serif; */
+  font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 1.25;
   letter-spacing: 0.6px;
@@ -119,10 +122,12 @@ nav {
   width: 100%;
 }
 
-.user h2 {
+.user h2,
+.name {
   font-size: 26px;
 }
-.user h6 {
+.user h6,
+.nickname {
   font-size: 20px;
   font-weight: 300;
   color: var(--color-darkest);
@@ -167,18 +172,29 @@ nav {
 }
 
 .tab-links ul li a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   height: 100%;
   padding: 0.9rem 0.6rem;
   margin-right: 1rem;
   text-decoration: none;
   font-size: 14px;
-  color: var(--color-darkest);
+  /* color: var(--color-darkest); */
+  color: #777777;
   font-weight: 600;
 }
 
 .active-tab {
+  color: var(--color-darkest) !important;
   border-bottom: 2px #f9826c solid;
+}
+
+.active-tab svg {
+  color: var(--color-darkest) !important;
+}
+
+.tab-links ul li {
+  position: relative !important;
 }
 
 .tab-links ul li a svg {
@@ -281,6 +297,13 @@ nav {
   justify-content: left;
 }
 
+.bio {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-darkest);
+}
+
 /* DESKTOP */
 @media (min-width: 768px) {
   main,
@@ -373,5 +396,28 @@ nav {
 
   .tab-links ul li a svg {
     display: inline;
+  }
+
+  aside {
+    margin-top: -30px;
+  }
+
+  .desktopPic {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px var(--color-light-2) solid;
+    background: var(--color-gray);
+    margin-bottom: 1rem;
+  }
+
+  .desktopPic img {
+    object-fit: contain;
+    width: 100%;
+  }
+  .block {
+    display: flex;
+    flex-direction: column;
   }
 }
