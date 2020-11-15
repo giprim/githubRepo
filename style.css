@@ -72,6 +72,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .desktop {
@@ -170,10 +175,54 @@ nav {
   border-bottom: 2px #f9826c solid;
 }
 
+.find-repo-input {
+  border: 1px var(--color-gray) solid;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+}
+
+.maxwidth {
+  max-width: 450px;
+}
+
+.btn-default,
+.btn-new {
+  border: 1px var(--color-gray) solid;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  color: var(--color-darkest);
+  margin: 0.4rem;
+  margin-left: 0;
+}
+
+.btn-default span,
+.btn-new span {
+  color: gray;
+}
+.btn-new,
+.btn-new span {
+  color: var(--color-white);
+}
+.btn-new {
+  border-color: #2ea44f;
+  background: #2ea44f;
+}
+
 /* DESKTOP */
 @media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: minmax(250px, 300px) 1fr;
+    grid-column-gap: 2rem;
+  }
+
   .mobile {
     display: none;
+  }
+
+  .maxwidth {
+    margin-right: 1rem;
   }
 
   .desktop {
