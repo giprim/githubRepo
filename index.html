@@ -82,11 +82,16 @@
 
         <h6 class="role">Software Engineer</h6>
       </div>
+      <div class="desktop"></div>
 
       <div class="tab-links box">
         <ul>
           <li><a href="#">Overview </a></li>
-          <li><a href="#" class="active-tab">Repositories </a></li>
+          <li>
+            <a href="#" class="active-tab"
+              ><i class="fas fa-book"></i> Repositories
+            </a>
+          </li>
           <li><a href="#">Projects </a></li>
           <li><a href="#">Packages </a></li>
         </ul>
@@ -107,8 +112,9 @@
           </div>
         </aside>
         <!-- Repos -->
-        <div>
-          <div class="flex-box">
+        <div class="repositories">
+          <!-- repository search and sort panel -->
+          <div class="flex-box border-bt">
             <div class="flex-grow maxwidth">
               <input
                 class="find-repo-input"
@@ -128,6 +134,41 @@
                 <span><i class="fas fa-book"></i></span> New
               </button>
             </div>
+          </div>
+
+          <!-- Repository -->
+          <div class="flex-box repo border-bt">
+            <div>
+              <h3>
+                <a href="#"> githubRepo </a>
+              </h3>
+              <div class="flex-box">
+                <span class="color"></span>
+                <span class="lang">HTML</span>
+                <span class="last-update">Updated yesterday</span>
+              </div>
+            </div>
+
+            <button class="star btn-default">
+              <i class="far fa-star"></i> Star
+            </button>
+          </div>
+          <!-- Repository -->
+          <div class="flex-box repo border-bt">
+            <div>
+              <h3>
+                <a href="#"> Finder </a>
+              </h3>
+              <div class="flex-box">
+                <span class="color"></span>
+                <span class="lang">HTML</span>
+                <span class="last-update">Updated yesterday</span>
+              </div>
+            </div>
+
+            <button class="star btn-default">
+              <i class="far fa-star"></i> Star
+            </button>
           </div>
         </div>
       </main>
