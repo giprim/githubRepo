@@ -69,7 +69,7 @@ window.addEventListener("DOMContentLoaded", function () {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "bearer f33fe5cdd6ce46f37e26a6d7722086c03b0b60d0",
+        Authorization: "bearer f33fe5cdd6ce46f37e26a6d7722086c03b0b60d0", // REPLACE GIT AUTH KEY (f33fe5cdd6ce46f37e26a6d7722086c03b0b60d0) WITH YOURS
       },
       body: JSON.stringify({
         query: query,
